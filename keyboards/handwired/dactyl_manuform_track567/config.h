@@ -23,8 +23,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID 0xFEED
 #define PRODUCT_ID 0x3060
 #define DEVICE_VER 0x0001
-#define MANUFACTURER   tshort
-#define PRODUCT Dactyl Manuform r track
+// #define MANUFACTURER scruben
+// #define PRODUCT dactylmantrack567
 // #define DESCRIPTION A ballin keyboard
 
 /* key matrix size */
