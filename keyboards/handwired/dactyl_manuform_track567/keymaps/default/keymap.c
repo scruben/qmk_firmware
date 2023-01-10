@@ -159,7 +159,7 @@ combo_t key_combos[COMBO_COUNT] = {
 	[RT_MOUSE] = COMBO_ACTION(rtm_combo),
 };
 
-void process_combo_event(uint8_t combo_index, bool pressed) {
+void process_combo_event(uint16_t combo_index, bool pressed) {
 	switch(combo_index) {
 	case RS_MOUSE:
 		on_mouse_button(MOUSE_BTN2, pressed);
@@ -220,10 +220,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB    , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   ,                                          KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_LBRC, KC_RBRC,
   KC_ESC    , KC_A   , KC_S   , KC_D   , KC_F   , KC_G   ,                                          KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT, KC_ENT ,
   TD(SFT_TM), KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   ,                                          KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_LSFT, KC_LSFT ,
-                    KC_LEFT, KC_RIGHT,                                                                                KC_UP  , KC_DOWN,               
-                                      KC_BTN1, TD(RAI_TM),                                                   KC_SPC ,                          
-                                                        TD(GUI_TM), TD(ALT_TM),   KC_DEL ,          KC_ENT ,                              
-                                                        TD(CTL_TM), TD(LOW_TM),            KC_BSPC                                    
+                    KC_LEFT, KC_RIGHT,                                                                                KC_UP  , KC_DOWN,
+                                      KC_BTN1, TD(RAI_TM),                                                   KC_SPC ,
+                                                        TD(GUI_TM), TD(ALT_TM),   KC_DEL ,          KC_ENT ,
+                                                        TD(CTL_TM), TD(LOW_TM),            KC_BSPC
 ),
 
 [_LOWER] = LAYOUT_5x67(
@@ -231,10 +231,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB    , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   ,                                          KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_LBRC, KC_RBRC,
   KC_ESC    , KC_A   , KC_S   , KC_D   , KC_F   , KC_G   ,                                          KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT, KC_ENT ,
   TD(SFT_TM), KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   ,                                          KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_LSFT, KC_LSFT ,
-                    KC_LEFT, KC_RIGHT,                                                                                KC_UP  , KC_DOWN,               
-                                      KC_BTN1, TD(RAI_TM),                                                   KC_SPC ,                          
-                                                        TD(GUI_TM), TD(ALT_TM),   KC_DEL ,          KC_ENT ,                              
-                                                        TD(CTL_TM), TD(LOW_TM),            KC_BSPC                                    
+                    KC_LEFT, KC_RIGHT,                                                                                KC_UP  , KC_DOWN,
+                                      KC_BTN1, TD(RAI_TM),                                                   KC_SPC ,
+                                                        TD(GUI_TM), TD(ALT_TM),   KC_DEL ,          KC_ENT ,
+                                                        TD(CTL_TM), TD(LOW_TM),            KC_BSPC
 ),
 
 [_RAISE] = LAYOUT_5x67(
@@ -242,10 +242,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB    , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   ,                                          KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_LBRC, KC_RBRC,
   KC_ESC    , KC_A   , KC_S   , KC_D   , KC_F   , KC_G   ,                                          KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT, KC_ENT ,
   TD(SFT_TM), KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   ,                                          KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_LSFT, KC_LSFT ,
-                    KC_LEFT, KC_RIGHT,                                                                                KC_UP  , KC_DOWN,               
-                                      KC_BTN1, TD(RAI_TM),                                                   KC_SPC ,                          
-                                                        TD(GUI_TM), TD(ALT_TM),   KC_DEL ,          KC_ENT ,                              
-                                                        TD(CTL_TM), TD(LOW_TM),            KC_BSPC                                    
+                    KC_LEFT, KC_RIGHT,                                                                                KC_UP  , KC_DOWN,
+                                      KC_BTN1, TD(RAI_TM),                                                   KC_SPC ,
+                                                        TD(GUI_TM), TD(ALT_TM),   KC_DEL ,          KC_ENT ,
+                                                        TD(CTL_TM), TD(LOW_TM),            KC_BSPC
 ),
 };
 

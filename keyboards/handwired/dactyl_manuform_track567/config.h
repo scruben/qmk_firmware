@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* key matrix size */
 #define MATRIX_ROWS 12
-#define MATRIX_COLS 6
+#define MATRIX_COLS 7
 
 /*
  * Keyboard Matrix Assignments
@@ -265,3 +265,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define USB_POLLING_INTERVAL_MS 3
 #define TAPPING_TERM 200
 #define POLLING true
+
+#define COMBO_COUNT 3
