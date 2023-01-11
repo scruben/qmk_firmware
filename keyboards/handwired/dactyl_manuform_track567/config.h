@@ -43,13 +43,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 //right
-#define MATRIX_ROW_PINS { F6, B5, B6, F7, B7, D4 }
-#define MATRIX_COL_PINS { D6, D7, B4, D3, C6, C7 }
+#define MATRIX_ROW_PINS { C7, F1, F0, B6, F6, NO_PIN }
+#define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B7, D5 }
 // #define UNUSED_PINS { D5, E6, F0, F1, F4, F5 }
 
 //left
-//#define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5 }
-//#define MATRIX_ROW_PINS { F6, F7, B1, B3, B2, B6 }
+//#define MATRIX_COL_PINS { F6, F7, B1, B3, B2, B6, NO_PIN }
+//#define MATRIX_ROW_PINS { D4, C6, D7, E6, B4, B5 }
 
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
