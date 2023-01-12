@@ -55,7 +55,7 @@
 #define LiftCutoff_Tune2  0x65
 
 // pins
-#define NCS B0
+#define NCS B1 // Previously B0... should this be SCLK pin?
 
 #define CLAMP_CPI(value) value < 0 ? 0 : value > 0x77 ? 0x77 : value
 
@@ -105,12 +105,12 @@ void pmw_init(void) {
 	#endif
 
 	SPI_Init(
-			SPI_SPEED_FCPU_DIV_2 | 
-			SPI_ORDER_MSB_FIRST | 
-			SPI_SCK_LEAD_FALLING | 
-			SPI_SAMPLE_TRAILING | 
+			SPI_SPEED_FCPU_DIV_2 |
+			SPI_ORDER_MSB_FIRST |
+			SPI_SCK_LEAD_FALLING |
+			SPI_SAMPLE_TRAILING |
 			SPI_MODE_MASTER);
-	
+
     setPinOutput(NCS);
     // reset serial port
     pmw_end();
