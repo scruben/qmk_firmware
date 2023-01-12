@@ -1,0 +1,11 @@
+{
+    "keyboard_name": "Dactyl Manuform Track567",
+    "manufacturer": "Scruben",
+    "url": "https://github.com/scruben/qmk_firmware",
+    "maintainer": "scruben",
+    "usb": {
+    	"vid": "0x2308",
+    	"pid": "0x1805",
+    	"device_version": "1.0.0"
+    }
+}
