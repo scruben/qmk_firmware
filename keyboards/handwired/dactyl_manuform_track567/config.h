@@ -267,3 +267,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define POLLING true
 
 #define COMBO_COUNT 3
+#define PMW33XX_CS_PIN B1
