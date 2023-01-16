@@ -418,8 +418,8 @@ void esctm_reset(qk_tap_dance_state_t *state, void *user_data) {
 void pointing_device_init(void) {
   if (!is_keyboard_master())
     return;
-  pmw3360_init();
-  pmw3360_set_cpi(PMW3360_CPI);
+  pmw33xx_init(0);
+  pmw33xx_set_cpi(0, PMW3360_CPI);
 }
 
 int max(int num1, int num2) { return (num1 > num2) ? num1 : num2; }
@@ -524,14 +524,14 @@ void handle_pointing_device_modes(void) {
 void get_sensor_data(void) {
   if (!is_keyboard_master())
     return;
-  report_pmw3360_t pmw_report = pmw3360_read_burst();
+  pmw33xx_report_t pmw_report = pmw33xx_read_burst(0);
 
   if (integration_mode) {
-    sensor_x += pmw_report.dx;
-    sensor_y += pmw_report.dy;
+    sensor_x += pmw_report.delta_x;
+    sensor_y += pmw_report.delta_y;
   } else {
-    sensor_x = pmw_report.dx;
-    sensor_y = pmw_report.dy;
+    sensor_x = pmw_report.delta_x;
+    sensor_y = pmw_report.delta_y;
   }
 }
 
