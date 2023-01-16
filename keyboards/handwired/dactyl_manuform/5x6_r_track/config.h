@@ -28,32 +28,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
-#ifdef MANUFACTURER
- #undef MANUFACTURER
-#endif
-#define MANUFACTURER Schievel
-#define PRODUCT_ID 0x3536
-#define DEVICE_VER 0x0001
-#define PRODUCT    Dactyl-Manuform r_track
-#define DESCRIPTION A splitballer board
-
-// disable some things to reduce firmware size
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
-
 /* key matrix size */
 // Rows are doubled-up
 #define MATRIX_ROWS 12
-#define MATRIX_COLS 6
+#define MATRIX_COLS 7
 
 // wiring of each half
 // left
-#define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5 }
-#define MATRIX_ROW_PINS { F6, F7, B1, B3, B2, B6 }
+#define MATRIX_COL_PINS { F6, F7, B1, B3, B2, B6, NO_PIN }
+#define MATRIX_ROW_PINS { D4, C6, D7, E6, B4, B5 }
 // right
-#define MATRIX_COL_PINS_RIGHT { D6, D7, B4, D3, C6, C7 }
-#define MATRIX_ROW_PINS_RIGHT { D4, B7, F7, B6, B5, F6 }
-#define PMW3360_CS_PIN B0
+#define MATRIX_ROW_PINS_RIGHT { C7, F1, F0, B6, F6, NO_PIN }
+#define MATRIX_COL_PINS_RIGHT { D4, C6, D7, E6, B4, B7, D5 }
+#define PMW33XX_CS_PIN B1
 
 #define PMW3360_LIFTOFF_DISTANCE 0x0A
 

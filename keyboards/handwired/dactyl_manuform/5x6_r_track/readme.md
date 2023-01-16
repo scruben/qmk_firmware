@@ -7,10 +7,7 @@ Qurn also progammerd the trackball with different modes. The available trackball
 ![Imgur](https://i.imgur.com/J8CNXSF.jpg)
 
 
-* Keyboard Maintainer: [Schievel](https://github.com/Schievel1)
-* Hardware Supported: Dactyl Manuform using an [PMW3360 and breakout board for the trackball](https://www.tindie.com/products/jkicklighter/pmw3360-motion-sensor/), Arduino Micro (right half), Arduino Pro Micro (left half) 
-* Hardware Availability: [Schievel](https://github.com/Schievel1)
-* Further information, 3D models for printing and building guide: https://github.com/Schievel1/dactyl_manuform_r_track/blob/main/README.org
+* Keyboard Maintainer: [scruben](https://github.com/scruben)
 
 Make example for this keyboard (after setting up your build environment):
 
