@@ -40,14 +40,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // right
 #define MATRIX_ROW_PINS_RIGHT { C7, F1, F0, B6, F6, NO_PIN }
 #define MATRIX_COL_PINS_RIGHT { D4, C6, D7, E6, B4, B7, D5 }
-#define PMW33XX_CS_PIN B1
+#define PMW33XX_CS_PIN F7
 
 #define PMW3360_LIFTOFF_DISTANCE 0x0A
 
 #define DIODE_DIRECTION COL2ROW
 
 #define MASTER_RIGHT
-//#define USE_I2C
+#define USE_I2C
 //#define SPLIT_USB_DETECT
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
