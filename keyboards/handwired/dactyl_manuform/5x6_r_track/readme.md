@@ -14,3 +14,10 @@ Make example for this keyboard (after setting up your build environment):
     make handwired/dactyl_manuform/5x6_r_track:default
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+
+## TODO
+- Fix scroll/carret directions, same way as cursor
+- Investigate integration mode, add high precission mode
+- Change trackball modes from tap dancing to lower/raise
+- Make boot magic work for left side
+- Define home/away, arrows (without trackball carret mode), media/brightness keys, num pad, ({[]}), macros/combos
