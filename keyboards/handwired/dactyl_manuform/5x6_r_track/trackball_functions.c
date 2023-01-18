@@ -484,8 +484,8 @@ void handle_pointing_device_modes(void) {
       cur_factor = cursor_multiplier_inte;
     else
       cur_factor = cursor_multiplier;
-    mouse_report.x = CLAMP_HID(sensor_x * cur_factor / 100);
-    mouse_report.y = CLAMP_HID(-sensor_y * cur_factor / 100);
+    mouse_report.x = CLAMP_HID(-sensor_x * cur_factor / 100);
+    mouse_report.y = CLAMP_HID(sensor_y * cur_factor / 100);
   } else {
     // accumulate movement until threshold reached
     cum_x += sensor_x;
