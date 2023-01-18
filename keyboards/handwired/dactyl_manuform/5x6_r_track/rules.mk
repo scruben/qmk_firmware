@@ -28,3 +28,5 @@ DEBOUNCE_TYPE = sym_eager_pk
 POINTING_DEVICE_ENABLE = yes
 POINTING_DEVICE_DRIVER = pmw3360
 SRC += trackball_functions.c
+
+BOOTMAGIC_ENABLE = yes
