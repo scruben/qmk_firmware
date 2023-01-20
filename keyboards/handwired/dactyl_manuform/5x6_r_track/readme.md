@@ -17,7 +17,9 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 ## TODO
 - Fix scroll/carret directions, same way as cursor
-- Investigate integration mode, add high precission mode
-- Change trackball modes from tap dancing to lower/raise
+- Fine tune cursor, carret, scroll speeds
+- Check shift-carret mode for selection
+- Investigate integration mode, add high precision mode
+- ~~Change trackball modes from tap dancing to lower/raise~~
 - Make boot magic work for left side
 - Define home/away, arrows (without trackball carret mode), media/brightness keys, num pad, ({[]}), macros/combos

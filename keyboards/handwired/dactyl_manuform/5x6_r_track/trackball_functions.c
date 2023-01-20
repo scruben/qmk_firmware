@@ -671,6 +671,18 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
       }
     }
 
+  case MO(_LOWER):
+    if (record->event.pressed) {
+        track_mode = SCROLL_MODE;
+    } else {
+        track_mode = CURSOR_MODE;
+    }
+  case MO(_RAISE):
+    if (record->event.pressed) {
+        track_mode = CARRET_MODE;
+    } else {
+        track_mode = CURSOR_MODE;
+    }
   default:
     return true;
   }
