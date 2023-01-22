@@ -16,10 +16,12 @@ Make example for this keyboard (after setting up your build environment):
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
 ## TODO
-- Fix scroll/carret directions, same way as cursor
+- ~~Fix scroll/carret directions, same way as cursor~~
 - Fine tune cursor, carret, scroll speeds
-- Check shift-carret mode for selection
+- ~~Check shift-carret mode for selection~~
 - Investigate integration mode, add high precision mode
 - ~~Change trackball modes from tap dancing to lower/raise~~
 - Make boot magic work for left side
-- Define home/away, arrows (without trackball carret mode), media/brightness keys, num pad, ({[]}), macros/combos
+- ~~Define home/away, arrows (without trackball carret mode), media/brightness keys, num pad~~
+- ~~({[]})~~
+- macros/combos
