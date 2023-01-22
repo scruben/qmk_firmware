@@ -487,10 +487,10 @@ void handle_pointing_device_modes(void) {
     mouse_report.x = CLAMP_HID(-sensor_x * cur_factor / 100);
     mouse_report.y = CLAMP_HID(sensor_y * cur_factor / 100);
   } else {
-    // accumulate movement until threshold reached
-    cum_x += sensor_x;
-    cum_y += sensor_y;
     if (track_mode == CARRET_MODE) {
+      // accumulate movement until threshold reached
+      cum_x -= sensor_x;
+      cum_y -= sensor_y;
       if (integration_mode)
         cur_factor = carret_threshold_inte;
       else
@@ -498,6 +498,9 @@ void handle_pointing_device_modes(void) {
       tap_tb(KC_RIGHT, KC_LEFT, KC_UP, KC_DOWN);
 
     } else if (track_mode == SCROLL_MODE) {
+      // accumulate movement until threshold reached
+      cum_x -= sensor_x;
+      cum_y -= sensor_y;
       if (integration_mode)
         cur_factor = scroll_threshold_inte;
       else
@@ -512,6 +515,9 @@ void handle_pointing_device_modes(void) {
         cum_y = 0;
       }
     } else { // sound vol/brightness (3)
+      // accumulate movement until threshold reached
+      cum_x -= sensor_x;
+      cum_y -= sensor_y;
       cur_factor = carret_threshold;
       tap_tb(KC_BRIGHTNESS_UP, KC_BRIGHTNESS_DOWN, KC_AUDIO_VOL_UP,
              KC_AUDIO_VOL_DOWN);
@@ -673,16 +679,18 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 
   case MO(_LOWER):
     if (record->event.pressed) {
-        track_mode = SCROLL_MODE;
-    } else {
-        track_mode = CURSOR_MODE;
-    }
-  case MO(_RAISE):
-    if (record->event.pressed) {
         track_mode = CARRET_MODE;
     } else {
         track_mode = CURSOR_MODE;
     }
+    return true;
+  case MO(_RAISE):
+    if (record->event.pressed) {
+        track_mode = SCROLL_MODE;
+    } else {
+        track_mode = CURSOR_MODE;
+    }
+    return true;
   default:
     return true;
   }
