@@ -73,9 +73,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PMW3360_CPI 250
 #define CPI_STEP_SENS 20
 #define ROTATIONAL_TRANSFORM_ANGLE -30
-#define CURSOR_MODE_SENS 500
-#define SCROLL_MODE_SENS 50
-#define CARRET_MODE_SENS 24
+#define CURSOR_MODE_SENS 250
+#define SCROLL_MODE_SENS 20
+#define CARRET_MODE_SENS 20
 #define CURSOR_INTE_SENS 5
 #define SCROLL_INTE_SENS 10000
 #define CARRET_INTE_SENS 2000
