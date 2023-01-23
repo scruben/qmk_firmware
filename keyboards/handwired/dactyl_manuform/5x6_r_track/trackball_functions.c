@@ -499,7 +499,7 @@ void handle_pointing_device_modes(void) {
 
     } else if (track_mode == SCROLL_MODE) {
       // accumulate movement until threshold reached
-      cum_x -= sensor_x;
+      // cum_x += sensor_x; // limt to vertical movement
       cum_y -= sensor_y;
       if (integration_mode)
         cur_factor = scroll_threshold_inte;
