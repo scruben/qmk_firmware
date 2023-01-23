@@ -31,3 +31,4 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 - what to do with two bottom keys, pretty useless (combos, bspc/del)
 - half speed for trackball
 - single click btn1 better alternative to be found
+- smooth scrolling if possible
