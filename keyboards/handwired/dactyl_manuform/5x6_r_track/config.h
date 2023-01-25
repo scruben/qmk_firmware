@@ -67,7 +67,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USB_POLLING_INTERVAL_MS 3
 #define TAPPING_TERM 200
 #define POLLING true
-#define COMBO_COUNT 6
+#define COMBO_COUNT 7
 
 // your editing pleasure:
 #define PMW3360_CPI 250

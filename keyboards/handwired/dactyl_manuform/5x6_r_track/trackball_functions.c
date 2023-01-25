@@ -132,7 +132,7 @@ void on_mouse_button(uint8_t mouse_button, bool pressed) {
  * Combos
  **************************/
 
-enum combos_events { SD_MOUSE, DF_MOUSE, SF_MOUSE, JK_MOUSE, KL_MOUSE, JL_MOUSE };
+enum combos_events { SD_MOUSE, DF_MOUSE, SF_MOUSE, JK_MOUSE, KL_MOUSE, JL_MOUSE, RAISE_COMBO };
 
 const uint16_t PROGMEM sdm_combo[] = {KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM dfm_combo[] = {KC_D, KC_F, COMBO_END};
@@ -140,6 +140,7 @@ const uint16_t PROGMEM sfm_combo[] = {KC_S, KC_F, COMBO_END};
 const uint16_t PROGMEM jkm_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM klm_combo[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM jlm_combo[] = {KC_J, KC_L, COMBO_END};
+const uint16_t PROGMEM raise_combo[] = {KC_LGUI, KC_RCTL, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [SD_MOUSE] = COMBO_ACTION(sdm_combo),
@@ -148,6 +149,7 @@ combo_t key_combos[COMBO_COUNT] = {
   [JK_MOUSE] = COMBO_ACTION(jkm_combo),
   [KL_MOUSE] = COMBO_ACTION(klm_combo),
   [JL_MOUSE] = COMBO_ACTION(jlm_combo),
+  [RAISE_COMBO] = COMBO_ACTION(raise_combo),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
@@ -169,6 +171,14 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         break;
     case JL_MOUSE:
         on_mouse_button(MOUSE_BTN3, pressed);
+        break;
+    case RAISE_COMBO:
+        // here we do our magic
+        if (pressed) {
+            layer_on(_RAISE);
+        } else {
+            layer_off(_RAISE);
+        }
         break;
   }
 }

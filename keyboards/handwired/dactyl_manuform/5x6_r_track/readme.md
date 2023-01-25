@@ -24,9 +24,9 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 - Make boot magic work for left side
 - ~~Define home/away, arrows (without trackball carret mode), media/brightness keys, num pad~~
 - ~~({[]})~~
-- enter/click in raise?
-- enter with right most fingers combo
-- definetely improve left cluster conondrum raise+ctl+win
+- ~~enter/click in raise?~~
+- ~~enter with right most fingers combo~~
+- ~~definetely improve left cluster conondrum raise+ctl+win~~
 - combos for i3wm window navigation
 - what to do with two bottom keys, pretty useless (combos, bspc/del)
 - half speed for trackball
