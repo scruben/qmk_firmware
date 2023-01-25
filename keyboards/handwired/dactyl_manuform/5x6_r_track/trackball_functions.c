@@ -132,29 +132,44 @@ void on_mouse_button(uint8_t mouse_button, bool pressed) {
  * Combos
  **************************/
 
-enum combos_events { SD_MOUSE, DF_MOUSE, SF_MOUSE };
+enum combos_events { SD_MOUSE, DF_MOUSE, SF_MOUSE, JK_MOUSE, KL_MOUSE, JL_MOUSE };
 
 const uint16_t PROGMEM sdm_combo[] = {KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM dfm_combo[] = {KC_D, KC_F, COMBO_END};
 const uint16_t PROGMEM sfm_combo[] = {KC_S, KC_F, COMBO_END};
+const uint16_t PROGMEM jkm_combo[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM klm_combo[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM jlm_combo[] = {KC_J, KC_L, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [SD_MOUSE] = COMBO_ACTION(sdm_combo),
   [DF_MOUSE] = COMBO_ACTION(dfm_combo),
   [SF_MOUSE] = COMBO_ACTION(sfm_combo),
+  [JK_MOUSE] = COMBO_ACTION(jkm_combo),
+  [KL_MOUSE] = COMBO_ACTION(klm_combo),
+  [JL_MOUSE] = COMBO_ACTION(jlm_combo),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
   switch (combo_index) {
-  case SD_MOUSE:
-    on_mouse_button(MOUSE_BTN2, pressed);
-    break;
-  case DF_MOUSE:
-    on_mouse_button(MOUSE_BTN1, pressed);
-    break;
-  case SF_MOUSE:
-    on_mouse_button(MOUSE_BTN3, pressed);
-    break;
+    case SD_MOUSE:
+        on_mouse_button(MOUSE_BTN2, pressed);
+        break;
+    case DF_MOUSE:
+        on_mouse_button(MOUSE_BTN1, pressed);
+        break;
+    case SF_MOUSE:
+        on_mouse_button(MOUSE_BTN3, pressed);
+        break;
+    case KL_MOUSE:
+        on_mouse_button(MOUSE_BTN2, pressed);
+        break;
+    case JK_MOUSE:
+        on_mouse_button(MOUSE_BTN1, pressed);
+        break;
+    case JL_MOUSE:
+        on_mouse_button(MOUSE_BTN3, pressed);
+        break;
   }
 }
 

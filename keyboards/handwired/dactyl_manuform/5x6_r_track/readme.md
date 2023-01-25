@@ -32,3 +32,5 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 - half speed for trackball
 - single click btn1 better alternative to be found
 - smooth scrolling if possible
+- miryoku ctrl alt gui shift
+- ~~one hand mouse~~
