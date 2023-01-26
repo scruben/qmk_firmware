@@ -140,7 +140,7 @@ const uint16_t PROGMEM sfm_combo[] = {KC_S, KC_F, COMBO_END};
 const uint16_t PROGMEM jkm_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM klm_combo[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM jlm_combo[] = {KC_J, KC_L, COMBO_END};
-const uint16_t PROGMEM raise_combo[] = {KC_LGUI, KC_RCTL, COMBO_END};
+const uint16_t PROGMEM raise_combo[] = {LGUI_T(KC_BSPC), RCTL_T(KC_ENT), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [SD_MOUSE] = COMBO_ACTION(sdm_combo),
@@ -176,8 +176,10 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         // here we do our magic
         if (pressed) {
             layer_on(_RAISE);
+            track_mode = SCROLL_MODE;
         } else {
             layer_off(_RAISE);
+            track_mode = CURSOR_MODE;
         }
         break;
   }
