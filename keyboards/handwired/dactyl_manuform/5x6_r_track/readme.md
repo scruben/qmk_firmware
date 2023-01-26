@@ -21,16 +21,17 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 - ~~Check shift-carret mode for selection~~
 - Investigate integration mode, add high precision mode
 - ~~Change trackball modes from tap dancing to lower/raise~~
-- Make boot magic work for left side
+- ~~Make boot magic work for left side (no need, if matrix is not changed)~~
 - ~~Define home/away, arrows (without trackball carret mode), media/brightness keys, num pad~~
 - ~~({[]})~~
 - ~~enter/click in raise?~~
 - ~~enter with right most fingers combo~~
 - ~~definetely improve left cluster conondrum raise+ctl+win~~
-- combos for i3wm window navigation
-- what to do with two bottom keys, pretty useless (combos, bspc/del)
+- ~~what to do with two bottom keys, pretty useless (combos, bspc/del), i3wm~~
 - half speed for trackball
 - single click btn1 better alternative to be found
 - smooth scrolling if possible
 - miryoku ctrl alt gui shift
 - ~~one hand mouse~~
+- ~~more utility to the bottom cluster buttons (appart from ctl gui spc) also enter bspc can be improved~~
+- posture is far from perfect, backpain and nowhere to place hands (wrist support)
