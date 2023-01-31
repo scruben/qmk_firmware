@@ -35,3 +35,7 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 - ~~one hand mouse~~
 - ~~more utility to the bottom cluster buttons (appart from ctl gui spc) also enter bspc can be improved~~
 - posture is far from perfect, backpain and nowhere to place hands (wrist support)
+- micro scroll movements not working, maybe we need to review some thresholds?
+- layer raise on right pinky, move 0 to another place?
+- hide reset buttons
+- make left side more stable
