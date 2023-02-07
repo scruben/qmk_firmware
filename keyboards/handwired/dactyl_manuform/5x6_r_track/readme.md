@@ -39,3 +39,4 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 - layer raise on right pinky, move 0 to another place?
 - hide reset buttons
 - make left side more stable
+- miryoku... one click left mouse button, on layer change on space... special chars improvements
