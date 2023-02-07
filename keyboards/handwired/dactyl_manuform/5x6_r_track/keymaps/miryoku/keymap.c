@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LSFT   , KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   ,                                          KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_LSFT, KC_LSFT,
                          LSG(KC_TAB), LGUI(KC_LEFT),                                                                LGUI(KC_RGHT), LGUI(KC_TAB),
                                            LGUI_T(KC_BSPC), RCTL_T(KC_ENT),                                    LT(_RAISE,KC_SPC) ,
-                                                            RALT_T(KC_BTN1), KC_DEL , KC_DEL,         KC_ENT ,
+                                                            KC_BTN1, KC_DEL , KC_DEL,         KC_ENT ,
                                                             LSFT_T(KC_ESC) , KC_TAB ,         KC_BSPC
     ),
 
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LSFT   , KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   ,                                          KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_LSFT, KC_LSFT,
                         KC_LEFT, KC_RIGHT,                                                                              KC_VOLU, KC_VOLD,
                                            KC_TAB , KC_CAPS,                                                   KC_ENT,
-                                                            TD(GUI_TM), TD(ALT_TM),   KC_DEL ,          KC_ENT ,
+                                                            KC_BTN3,    TD(ALT_TM),   KC_DEL ,          KC_ENT ,
                                                             TD(CTL_TM), TD(LOW_TM),            KC_TAB
     ),
 
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LSFT   , KC_PLUS, KC_EXLM, KC_AT  , KC_HASH, KC_LBRC,                                          KC_RBRC, KC_1   , KC_2   , KC_3   , KC_EQL , KC_LSFT, KC_LSFT,
                          KC_LEFT, KC_RIGHT,                                                                                KC_UP  , KC_DOWN,
                                         KC_BTN1, TD(RAI_TM),                                                   KC_BSPC ,
-                                                            TD(GUI_TM), TD(ALT_TM),   KC_DEL,         KC_ENT ,
+                                                            KC_BTN2,    TD(ALT_TM),   KC_DEL,         KC_ENT ,
                                                             TD(CTL_TM), TD(LOW_TM),           KC_BSPC
     )
 };
