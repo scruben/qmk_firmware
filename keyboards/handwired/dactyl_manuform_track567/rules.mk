@@ -19,7 +19,7 @@ BOOTLOADER = atmel-dfu # right
 BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no       # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
-CONSOLE_ENABLE = yes        # Console for debug
+CONSOLE_ENABLE = no        # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
@@ -36,7 +36,7 @@ COMBO_ENABLE = yes
 
 DEBOUNCE_TYPE = asym_eager_defer_pk
 SPLIT_KEYBOARD = yes
-TAP_DANCE_ENABLE = yes
+TAP_DANCE_ENABLE = no
 
 # Add trackball support
 POINTING_DEVICE_ENABLE = yes
