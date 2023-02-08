@@ -40,3 +40,7 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 - hide reset buttons
 - make left side more stable
 - miryoku... one click left mouse button, on layer change on space... special chars improvements
+- default: add pinkies/index raise lt, swap cursor mode to raise with thumb button to click (not sure, getting used to click with combo)
+- top pinkies remove? move to right? p to ' (hard to reach, but maybe is just getting used to)
+- lower and raise in right side using h and ' with LT
+- attach wrists supports somehow to keybs

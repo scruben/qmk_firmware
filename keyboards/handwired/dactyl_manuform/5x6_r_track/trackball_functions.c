@@ -704,7 +704,14 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
       }
     }
 
-  case MO(_LOWER):
+  case LT(_LOWER,KC_TAB):
+    if (record->event.pressed) {
+        track_mode = CARRET_MODE;
+    } else {
+        track_mode = CURSOR_MODE;
+    }
+    return true;
+  case LT(_LOWER,KC_SCLN):
     if (record->event.pressed) {
         track_mode = CARRET_MODE;
     } else {
