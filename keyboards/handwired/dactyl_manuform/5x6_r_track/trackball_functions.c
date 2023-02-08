@@ -606,19 +606,19 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 
   switch (keycode) {
     // no repetitive ::: with holding
-  case KC_SCLN_INV:
-    if (record->event.pressed) {
-      if (is_sft_active) {
-        unregister_mods(MOD_BIT(KC_LSFT));
-        tap_code(KC_SCLN);
-        register_mods(MOD_BIT(KC_LSFT));
-      } else {
-        register_mods(MOD_BIT(KC_LSFT));
-        tap_code(KC_SCLN);
-        unregister_mods(MOD_BIT(KC_LSFT));
-      }
-    }
-    return false;
+//   case KC_SCLN_INV:
+//     if (record->event.pressed) {
+//       if (is_sft_active) {
+//         unregister_mods(MOD_BIT(KC_LSFT));
+//         tap_code(KC_SCLN);
+//         register_mods(MOD_BIT(KC_LSFT));
+//       } else {
+//         register_mods(MOD_BIT(KC_LSFT));
+//         tap_code(KC_SCLN);
+//         unregister_mods(MOD_BIT(KC_LSFT));
+//       }
+//     }
+//     return false;
 
     // ; and : gets confused in some corner cases
     // case KC_SCLN_INV:
@@ -641,19 +641,19 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     //	}
     //	return false;
 
-  case KC_TILD_MY:
-    if (record->event.pressed) {
-      tap_code16(KC_TILD);
-      tap_code(KC_SPC);
-    }
-    return false;
+//   case KC_TILD_MY:
+//     if (record->event.pressed) {
+//       tap_code16(KC_TILD);
+//       tap_code(KC_SPC);
+//     }
+//     return false;
 
-  case KC_QUOT_MY:
-    if (record->event.pressed) {
-      tap_code(KC_QUOT);
-      tap_code(KC_SPC);
-    }
-    return false;
+//   case KC_QUOT_MY:
+//     if (record->event.pressed) {
+//       tap_code(KC_QUOT);
+//       tap_code(KC_SPC);
+//     }
+//     return false;
 
   // handle mouse
   case KC_BTN1:
@@ -704,9 +704,23 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
       }
     }
 
-  case LT(_LOWER,KC_TAB):
+  case LT(_LOWER,KC_A):
     if (record->event.pressed) {
         track_mode = CARRET_MODE;
+    } else {
+        track_mode = CURSOR_MODE;
+    }
+    return true;
+  case LT(_RAISE,KC_QUOT):
+    if (record->event.pressed) {
+        track_mode = SCROLL_MODE;
+    } else {
+        track_mode = CURSOR_MODE;
+    }
+    return true;
+  case LT(_RAISE,KC_TAB):
+    if (record->event.pressed) {
+        track_mode = SCROLL_MODE;
     } else {
         track_mode = CURSOR_MODE;
     }
